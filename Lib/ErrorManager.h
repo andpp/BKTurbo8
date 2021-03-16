@@ -1,0 +1,51 @@
+#pragma once
+
+enum ERROR_NUMBER
+{
+	ERROR_100,
+	ERROR_101,
+	ERROR_102,
+	ERROR_103,
+	ERROR_104,
+	ERROR_105,
+	ERROR_106,
+	ERROR_107,
+	ERROR_108,
+	ERROR_109,
+	ERROR_110,
+	ERROR_111,
+	ERROR_112,
+	ERROR_113,
+	ERROR_114,
+	ERROR_115,
+	ERROR_116,
+	ERROR_117,
+	ERROR_118,
+	ERROR_119,
+	ERROR_120,
+	ERROR_121,
+	ERROR_122,
+	ERROR_123,
+	ERROR_124,
+	ERROR_125,
+	ERROR_126,
+	ERROR_127,
+	ERROR_128,
+	ERROR_129,
+	ERROR_130,
+	ERROR_131,
+	ERROR_132,
+	ERROR_133,
+	ERROR_134,
+	ERROR_135,
+};
+
+struct BKTurboAsm_Error
+{
+	int num;
+    std::string str;
+};
+
+void OutError(ERROR_NUMBER n, bool bOutStr = true, int nAddr = -1);
+int IsError();
+
