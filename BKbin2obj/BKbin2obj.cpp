@@ -32,13 +32,13 @@ int main(int argc, char *argv[])
     InitGlobalParameters(&g_GlobalParameters);
 	static struct option long_options[] =
 	{
-        { "help",         ARG_NONE, nullptr, L'?' },
-        { "source",       ARG_REQ,  nullptr, L's' },
-        { "even",         ARG_OPT,  nullptr, L'e' },
-        { "label",        ARG_REQ,  nullptr, L'l' },
-        { "final",        ARG_REQ,  nullptr, L'f' },
-        { "color",        ARG_NONE, nullptr, L'c' },
-        { "transparency", ARG_NONE, nullptr, L't' },
+        { "help",         ARG_NONE, nullptr, '?' },
+        { "source",       ARG_REQ,  nullptr, 's' },
+        { "even",         ARG_OPT,  nullptr, 'e' },
+        { "label",        ARG_REQ,  nullptr, 'l' },
+        { "final",        ARG_REQ,  nullptr, 'f' },
+        { "color",        ARG_NONE, nullptr, 'c' },
+        { "transparency", ARG_NONE, nullptr, 't' },
         { nullptr,        ARG_NULL, nullptr, ARG_NULL }
 	};
     static char optstring[] = "?s:e::l:f:ct";
@@ -90,14 +90,6 @@ int main(int argc, char *argv[])
 				if (optarg)
 				{
                     strLabel = strToUpper(std::string(optarg));
-
-//					if (!strLabel.empty())
-//					{
-//						for (wchar_t &n : strLabel)
-//						{
-//							n = toupper(n);
-//						}
-//					}
 				}
 
 				break;
@@ -108,14 +100,6 @@ int main(int argc, char *argv[])
 				if (optarg)
 				{
                     strFinalLabel = strToUpper(std::string(optarg));
-
-//					if (!strFinalLabel.empty())
-//					{
-//						for (wchar_t &n : strFinalLabel)
-//						{
-//							n = toupper(n);
-//						}
-//					}
 				}
 
 				break;
