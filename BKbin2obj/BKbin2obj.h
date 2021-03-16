@@ -47,7 +47,7 @@ public:
 
     void Destroy() {
         if(img)
-            free(img);
+            stbi_image_free(img);
         width = 0;
         height = 0;
         img = nullptr;
